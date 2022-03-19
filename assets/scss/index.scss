@@ -1,0 +1,102 @@
+@use 'reset';
+@use 'fonts';
+
+$white: #FFFFFF;
+$grey: #E8E8E8;
+$light-blue: #5474FD;
+$button-blue: #496BFE;
+$font-size-p: 1.6rem;
+$h3-font-size: 2rem;
+
+
+.main-banner{
+  padding: 10rem 0;
+  background-image: url(/assets/images/image\ 1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  .main-banner__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: fonts.$josefin-font;
+    h1{
+      font-size: 4.8rem;
+      font-weight: 700;
+      line-height: 2.6rem;
+      letter-spacing: 0.48rem;
+      color: $white;
+      margin-bottom: 1.1rem;
+    }
+    p{
+      font-size: 2.2rem;
+      line-height: 2.6rem;
+      letter-spacing: 0.68rem;
+      color: $white;
+      margin-bottom: 4.8rem;
+    }
+    .main-banner__form--content{
+      display: flex;
+      input{
+        border: 0;
+        background-color: $white;
+        font-family: fonts.$josefin-font;
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+        letter-spacing: 0.28rem;
+        color: $grey;
+        width:50rem;
+        padding: 1.7rem;
+        text-align: center;
+      }
+      button{
+        background-color: $button-blue;
+        font-family: fonts.$aleo-font;
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+        color: $white;
+        letter-spacing: 0.14rem;
+        border: 2px solid white;
+        padding: 1.7rem 2.3rem;
+      }
+    }
+    .main-banner__scroll{
+      margin-top: 10.8rem;
+      display: flex;
+      flex-direction: column;
+      a{
+        font-family: fonts.$josefin-font;
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+        letter-spacing: 0.28rem;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      i{
+        color: $white;
+      }
+    }
+  }
+}
+
+
+
+/** MEDIA QUERIES **/
+
+@media screen and (max-width:756px){
+  .main-banner__form--content{
+    flex-direction: column;
+    align-items: center;
+    input{
+      width: 125%;
+    }
+  }
+  }
