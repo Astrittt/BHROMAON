@@ -8,6 +8,10 @@ $button-blue: #496BFE;
 $font-size-p: 1.6rem;
 $h3-font-size: 2rem;
 
+%inner-centered{
+  width:62.5%;
+  margin: 0 auto;
+}
 
 .main-banner{
   padding: 10rem 0;
@@ -47,7 +51,7 @@ $h3-font-size: 2rem;
         font-size: 1.4rem;
         line-height: 2.6rem;
         letter-spacing: 0.28rem;
-        color: $grey;
+        color: #999999;
         width:50rem;
         padding: 1.7rem;
         text-align: center;
@@ -61,6 +65,9 @@ $h3-font-size: 2rem;
         letter-spacing: 0.14rem;
         border: 2px solid white;
         padding: 1.7rem 2.3rem;
+        &:hover{
+          background-color: #282828;
+        }
       }
     }
     .main-banner__scroll{
@@ -87,16 +94,145 @@ $h3-font-size: 2rem;
   }
 }
 
-
+.nav-section{
+  background-color: $light-blue;
+  padding: 1.5rem 0;
+  &__main-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend %inner-centered;
+    a{
+      font-family: fonts.$josefin-font;
+      font-size: 2.4rem;
+      font-family: 700;
+      line-height: 2.6rem;
+      letter-spacing: 0.2rem;
+      color: $white;
+    }
+  }
+  &__list{
+    display: flex;
+    li{
+      margin-left: 1.2rem;
+      margin-right: 1.2rem;
+      &:first-child{
+        margin-left: 0;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+      a{
+        font-family: fonts.$aleo-font;
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+        text-decoration: none;
+        color: $white;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+.why-us-section{
+  background-image: url(/assets/images/banner-img2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &__inner{
+    display: flex;
+    align-items: center;
+    padding: 10rem 0;
+    @extend %inner-centered;
+    .why-us-section__text{
+      h3{
+        margin-top: 21.2rem;
+        font-family: fonts.$aleo-font;
+        font-size: 3.6rem;
+        line-height: 2.6rem;
+        color: $white;
+        margin-bottom: 5rem;
+      }
+      p{
+        font-family: fonts.$josefin-font;
+        font-size: 1.6rem;
+        color: $white;
+        line-height: 2.6rem;
+        letter-spacing: 0.1rem;
+        margin-top: 5rem;
+        margin-bottom: 4.5rem;
+      }
+      a{
+        background-color: rgba(84, 116, 253, 0.5);
+        font-family: fonts.$aleo-font;
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+        color: $white;
+        letter-spacing: 0.14rem;
+        padding: 1.7rem 2.3rem;
+        &:hover{
+          background-color: #282828;
+        }
+      }
+    }
+    .why-us-section__images{
+      margin-left: 5rem;
+      margin-right: 2rem;
+      padding-right: 2rem;
+      margin-bottom: 4rem;
+      &--img1{
+        max-width: 350px;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-left: -10px;
+      }
+      &--img2{
+        max-width: 350px;
+        width: 100%;
+        margin-left: 50px;
+      }
+    }
+  }
+}
 
 /** MEDIA QUERIES **/
+
+@media screen and (max-width: 1100px){
+  .nav-section{
+    &__main-nav{
+     flex-direction: column;
+    }
+  }
+}
+
 
 @media screen and (max-width:756px){
   .main-banner__form--content{
     flex-direction: column;
     align-items: center;
-    input{
-      width: 125%;
+    button{
+      margin-top: 2rem;
     }
   }
+  .nav-section__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li{
+      margin-top: 2rem;
+    }
   }
+}
+
+@media screen and (max-width:687px){
+  .why-us-section__inner{
+    flex-direction: column;
+    .why-us-section__text{
+      text-align: center;
+    }
+    .why-us-section__images{
+      margin-top: 15rem;
+    }
+  }
+}
