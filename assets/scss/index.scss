@@ -143,11 +143,11 @@ $h3-font-size: 2rem;
   &__inner{
     display: flex;
     align-items: center;
-    padding: 10rem 0;
     @extend %inner-centered;
     .why-us-section__text{
+      margin-top: 21.2rem;
+      width: 50.4%;
       h3{
-        margin-top: 21.2rem;
         font-family: fonts.$aleo-font;
         font-size: 3.6rem;
         line-height: 2.6rem;
@@ -163,7 +163,8 @@ $h3-font-size: 2rem;
         margin-top: 5rem;
         margin-bottom: 4.5rem;
       }
-      a{
+      button{
+        border: none;
         background-color: rgba(84, 116, 253, 0.5);
         font-family: fonts.$aleo-font;
         font-size: 1.4rem;
@@ -171,6 +172,7 @@ $h3-font-size: 2rem;
         color: $white;
         letter-spacing: 0.14rem;
         padding: 1.7rem 2.3rem;
+        margin-bottom: 13.1rem;
         &:hover{
           background-color: #282828;
         }
@@ -181,6 +183,7 @@ $h3-font-size: 2rem;
       margin-right: 2rem;
       padding-right: 2rem;
       margin-bottom: 4rem;
+      margin-top: 118px;
       &--img1{
         max-width: 350px;
         width: 100%;
@@ -221,8 +224,113 @@ $h3-font-size: 2rem;
   }
 }
 
+.feedback-section-upper{
+  background-image: url(/assets/images/modern-house-img.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 10rem 0;
+  &__inner{
+    @extend %inner-centered;
+    font-family: fonts.$josefin-font;
+    h4{
+      font-size: 2rem;
+      line-height: 2.6rem;
+      letter-spacing: 0.1rem;
+      margin-bottom: 2.3rem;
+      color: $white;
+    }
+    h3{
+      font-size: $h3-font-size;
+      line-height: 2.6rem;
+      margin-bottom: 1.3rem;
+      color:$white
+    }
+    p{
+      font-size: $font-size-p;
+      line-height: 2.6rem;
+      margin-bottom: 4.6rem;
+      color:$white
+    }
+    button{
+      border: none;
+      background-color: rgba(84, 116, 253, 0.5);
+      font-family: "Aleo", sans-serif;
+      font-size: 1.4rem;
+      line-height: 2.6rem;
+      color: #FFFFFF;
+      letter-spacing: 0.14rem;
+      width: 228px;
+      height: 63px;
+      &:hover{
+        background-color: #282828;
+      }
+    }
+    &__card-content{
+      background-color: rgba(35, 35, 35, 0.9);
+      width: 50.4rem;
+      padding: 2.5rem 1.5rem ;
+      margin-top: 20.3rem;
+    }
+  }
+}
+
+.feedback-section-under{
+  background-image: url(/assets/images/rocks-image.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 10rem 0;
+  &__inner{
+    @extend %inner-centered;
+    font-family: fonts.$josefin-font;
+    display: flex;
+    flex-direction: row-reverse;
+    h4{
+      font-size: 2rem;
+      line-height: 2.6rem;
+      letter-spacing: 0.1rem;
+      margin-bottom: 2.3rem;
+      color: $white;
+    }
+    h3{
+      font-size: $h3-font-size;
+      line-height: 2.6rem;
+      margin-bottom: 1.3rem;
+      color:$white
+    }
+    p{
+      font-size: $font-size-p;
+      line-height: 2.6rem;
+      margin-bottom: 4.6rem;
+      color:$white
+    }
+    button{
+      border: none;
+      background-color: rgba(84, 116, 253, 0.5);
+      font-family: "Aleo", sans-serif;
+      font-size: 1.4rem;
+      line-height: 2.6rem;
+      color: #FFFFFF;
+      letter-spacing: 0.14rem;
+      width: 228px;
+      height: 63px;
+      &:hover{
+        background-color: #282828;
+      }
+    }
+    &__card-content{
+      background-color: rgba(35, 35, 35, 0.9);
+      width: 50.4rem;
+      padding: 2.5rem 1.5rem ;
+      margin-top: 20.3rem;
+    }
+  }
+}
+
 
 /** MEDIA QUERIES **/
+
 
 @media screen and (max-width: 1100px){
   .nav-section{
@@ -241,6 +349,22 @@ $h3-font-size: 2rem;
         p{
           margin-top: 1rem;
         }
+      }
+    }
+  }
+  .why-us-section{
+    &__inner{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .why-us-section__text{
+      width: 100%;
+      text-align: center;
+      margin-top: 15rem;
+      button{
+        margin-bottom: 0rem;
       }
     }
   }
@@ -263,9 +387,6 @@ $h3-font-size: 2rem;
       margin-top: 2rem;
     }
   }
-}
-
-@media screen and (max-width:687px){
   .why-us-section__inner{
     flex-direction: column;
     .why-us-section__text{
@@ -275,4 +396,7 @@ $h3-font-size: 2rem;
       margin-top: 15rem;
     }
   }
+}
+
+@media screen and (max-width:687px){
 }
