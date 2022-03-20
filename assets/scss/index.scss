@@ -195,6 +195,32 @@ $h3-font-size: 2rem;
     }
   }
 }
+.how-it-works-section{
+  background-color: #333333;
+  text-align: center;
+  padding: 3.9rem 0;
+  font-family: fonts.$aleo-font;
+  &__inner{
+    @extend %inner-centered;
+    p{
+      font-size: 3.6rem;
+      line-height: 2.6rem;
+      color: $grey;
+      margin-top: 3.9rem;
+    }
+    ul{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      li{
+        i{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
 
 /** MEDIA QUERIES **/
 
@@ -202,6 +228,20 @@ $h3-font-size: 2rem;
   .nav-section{
     &__main-nav{
      flex-direction: column;
+    }
+  }
+  .how-it-works-section{
+    ul{
+      flex-direction: column;
+      li{
+        margin-top: 6rem;
+        &:first-child{
+          margin-top: 0;
+        }
+        p{
+          margin-top: 1rem;
+        }
+      }
     }
   }
 }
